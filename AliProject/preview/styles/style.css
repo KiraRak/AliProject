@@ -1,0 +1,76 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background: linear-gradient(135deg, #e6e6fa, #b0c4de);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Form label styles */
+label {
+    display: block; /* Ensures the label takes up the full width */
+    text-align: center; /* Horizontally centers the label text */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    margin-bottom: 1%; /* Adjust as needed */
+}
+
+/* Button styles */
+button {   
+    align-items: center;
+    width: 100%;
+    background-color: #33B5FF;
+    color: #ffffff;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc6805;
+}
+
+/* Thank You Message styles */
+.thank-you {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #316296;
+    margin-top: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+.list{
+    width: 100%;
+    background-color: #33B5FF;
+    border-radius: 0 0 7px 7px;
+}
+
+.list-items{
+    padding: 10px, 5px;
+}
+
+.list-items:hover{
+    background-color: #a1cfea;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="forms.css">
+  <link rel="stylesheet" href="list.css">
+</head>
+<body>
+ <img id="cornerImage" src="images/mascot.png" alt="Muslim Network Mascot">
+  <div id="userForm">
+    <input type="text" id="firstName" placeholder="First Name" required><br>
+
+    <input type="text" id="lastName" placeholder="Last Name" required><br>
+
+    <input type="email" id="email" placeholder="Email" required><br>
+
+    <input type="text" id="phone" placeholder="Phone" required><br>
+
+    <button type="submit" onclick="saveUserInfo()">Next</button>
+  </div>
+
+  <div id="jobForm" style="display: none;">
+    <label for="jobStatus">What is your current employment status?</label>
+    <select id="jobStatus">
+      <option value="company">I currently work for a company</option>
+      <option value="business">I own a Business</option>
+    </select>
+
+    <button type="submit" onclick="saveJobStatus()">Next</button>
+  </div>
+
+  <div id="businessForm" style="display: none;">
+    <label for="businessName">What is the name of your business?</label>
+    <input type="text" id="businessName" required placeholder="Enter Business Name"><br>
+
+    <button type="button" onclick="saveBusinessName()">Next</button>
+  </div>
+
+  <div id="businessListingForm" style="display: none;">
+    <label for="businessListing">Would you like to list your Business on our directory?</label>
+    <select id="businessListing">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <button type="button" onclick="saveBusinessListing()">Next</button>
+  </div>
+
+  <div id="businessAddressForm" style="display: none;">
+    <label for="businessAddress">What is your Business address?</label>
+    <input type="text" id="businessAddress" required><br>
+
+    <button type="button" onclick="saveBusinessAddress()">Save</button>
+  </div>
+
+  <div id="industryForm" style="display: none;">
+    <label for="industry">What industry do you work in?</label>
+    <input type="text" id="industry" placeholder="ex. Food Industry" required><br>
+    <ul class="list"></ul>
+     
+    <div id="results"></div>
+    <button type="button" onclick="saveIndustry()">Save</button>
+  </div>
+   
+
+  <div class="thank-you" id="thankYouMessage" style="display: none;">
+    <p>Thank you! We appreciate it.</p>
+  </div>
+
+  <div id="volunteerForm" style="display: none;">
+    <label for="volunteer">Are you interested in staying connected and potentially volunteering for future initiatives?</label>
+    <select id="volunteer">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <button type="button" onclick="saveVolunteer()">Next</button>
+  </div>
+
+  <div id="contactForm" style="display: none;">
+    <label for="contact">How would you like us to contact you?</label>
+    <select id="contact">
+      <option value="Text">Text</option>
+      <option value="Email">Email</option>
+    </select>
+
+    <button type="button" onclick="saveContact()">Next</button>
+  </div>
+
+  <footer>
+    <p>&copy; <?php echo date("Y"); ?> The Muslim Network. All Rights Reserved
