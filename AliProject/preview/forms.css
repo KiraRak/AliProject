@@ -1,3 +1,6 @@
+select{
+cursor: pointer;
+}
 
 #userForm{
     display: flex;
