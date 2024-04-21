@@ -19,16 +19,7 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-
-/* Form label styles */
-label {
-    display: block; /* Ensures the label takes up the full width */
-    text-align: center; /* Horizontally centers the label text */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2vh;
-    margin-bottom: 1%; /* Adjust as needed */
-}
-
+ 
 /* Button styles */
 button {   
     align-items: center;
@@ -57,32 +48,6 @@ button:hover {
     margin-top: 20px;
 }
 
-ul{
-    list-style: none;
-}
-
-.list{
-    width: 100%;
-    background-color: #33B5FF;
-    border-radius: 0 0 7px 7px;
-}
-
-.list-items{
-    padding: 10px, 5px;
-}
-
-.list-items:hover{
-    background-color: #a1cfea;
-}
-
-footer {
-      text-align: center; /* Center the content horizontally */
-      font-size: 0.8em; /* Set a smaller font size */
-      color: gray; /* Set the color to gray */
-      position: absolute; /* Position the footer absolutely */
-      bottom: 0; /* Place it at the bottom of the page */
-      width: 100%; /* Span the entire width */
-}
 #cornerImage {
     position: fixed;
     bottom: 10px;
@@ -92,3 +57,12 @@ footer {
     max-width: 300px; /* Set a maximum width for the image */
     height: auto; /* Allow the height to adjust proportionally */
   }
+
+footer {
+      text-align: center; /* Center the content horizontally */
+      font-size: 0.8em; /* Set a smaller font size */
+      color: gray; /* Set the color to gray */
+      position: absolute; /* Position the footer absolutely */
+      bottom: 0; /* Place it at the bottom of the page */
+      width: 100%; /* Span the entire width */
+}
