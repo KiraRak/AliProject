@@ -234,13 +234,7 @@ function saveUserInfo() {
     const lastName = document.getElementById("lastName").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
-    const form = document.getElementById("userForm");
 
-    form.addEventListener('userBtn', (e)=> {
-        if (firstName.value === '' || firstName == null){
-            e.preventDefault()
-        }
-    })
     // Save user info (you can store it in local storage or send it to a server)
     // For demonstration purposes, we'll just display a welcome message:
     const fullName = firstName + " " + lastName;
@@ -250,7 +244,6 @@ function saveUserInfo() {
     document.getElementById("userForm").style.display = "none";
     document.getElementById("jobForm").style.display = "flex";
 }
-
 
 
 function saveJobStatus() {
@@ -304,7 +297,7 @@ function saveIndustry() {
     industry = document.getElementById("industry").value;
     console.log(`Your work for: ${industry}`);
 
-    // Hide the job title form and show the thank you message
+    // Hide the job title form 
     document.getElementById("industryForm").style.display = "none";
     document.getElementById("volunteerForm").style.display = "flex";
 }
