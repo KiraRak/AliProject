@@ -120,11 +120,11 @@ cursor: pointer;
     padding: 7px;
     font-family: 'Poppins', sans-serif;   
     z-index: 2;
-    top: 53.8%;
-    left: 5.2%;
+    top: 53.85%;
+    left: 5.25%;
     display: flex;
     align-items: center;
-    color: #868686;
+    color: #868686b9;
     position: absolute;
     font-size: 15px;
 
