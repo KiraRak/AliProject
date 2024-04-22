@@ -152,47 +152,67 @@ let data = [
     "Writing/Editing"
    ]
 
-// sort data in ascending order    
-let sortedData = data.sort();
-//console.log(sortedData);
-
-//reference
+data.sort();
 let industry = document.getElementById("industry");
+let suggestion = document.getElementById("suggestion");
 
-//Execute function on keyup
-industry.addEventListener("keyup", (e)=>{
-    //initially remove all elements
-    removeElements();
+const enterKey = 13;
 
-    //loop throught above array
-    for(let i of sortedData){
-        //console.log(i);
+window.onload = () => {
+    industry.value = "";
+    clearSuggestion();
+};
 
-        //convert input to lowercase and compare with each string
-        if(i.toLowerCase().startsWith(industry.value.toLowerCase()) 
-            && 
-            industry.value != ""){
-           
-            //create li element
-            let listItem = document.createElement("li");
+const clearSuggestion = () => {
+    suggestion.innerHTML = "";
+};
 
-            //One common class name
-            listItem.classList.add("list-items");
-            listItem.style.cursor = "pointer";
-            listItem.setAttribute("onclick", "displayData('"+
-            i + "')");  
 
-            //DIsplay matched part in bold
-            let word = "<b>" + i.substr(0, industry.value.lenght) + "</b>";
+const caseCheck = (word) => {
+    //Array of characters
+    word = word.split("");
+    let inp = industry.value;
+    //loop through every character in ino
+    for (let i in inp) {
+      //if input character matches with character in word no need to change
+      if (inp[i] == word[i]) {
+        continue;
+      } else if (inp[i].toUpperCase() == word[i]) {
+        //if inp[i] when converted to uppercase matches word[i] it means word[i] needs to be lowercase
+        word.splice(i, 1, word[i].toLowerCase());
+      } else {
+        //word[i] needs to be uppercase
+        word.splice(i, 1, word[i].toUpperCase());
+      }
+    }
+    //array to string
+    return word.join("");
+  };
 
-            //word += i.substr(industry.value.lenght);
-            //console.log(word);
-            
-            //display the value in array
-            listItem.innerHTML = word;
-            //console.log(listItem);
-            document.querySelector(".list").appendChild(listItem);
-        }
+//complete predictive text with enter key
+industry.addEventListener("keydown", (e) => {
+    if (e.keyCode == enterKey && suggestion.innerText != ""){
+        e.preventDefault();
+        industry.value = suggestion.innerText;
+        clearSuggestion();
+    }
+})  
+
+//Execute function on input
+industry.addEventListener("input", (e) => {
+    clearSuggestion();
+    let regex = new RegExp("^" + industry.value, "i");
+    
+
+    for (let i in data){
+        //check if input matches with any word
+        if(regex.test(data[i]) && industry.value != ""){
+            //change case of word in words array according to user input
+            data[i] = caseCheck(data[i]);
+            //display suggestion
+            suggestion.innerHTML = data[i];
+            break;
+        }  
     }
 });
 
