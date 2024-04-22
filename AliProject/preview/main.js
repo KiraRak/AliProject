@@ -222,7 +222,7 @@ function saveUserInfo() {
 
     // Show the job status form
     document.getElementById("userForm").style.display = "none";
-    document.getElementById("jobForm").style.display = "block";
+    document.getElementById("jobForm").style.display = "flex";
 }
 
 function saveJobStatus() {
@@ -233,10 +233,10 @@ function saveJobStatus() {
     // Conditionally show the business name form or job title form
     if (userJobStatus === "business") {
         document.getElementById("jobForm").style.display = "none";
-        document.getElementById("businessForm").style.display = "block";
+        document.getElementById("businessForm").style.display = "flex";
     } else {
         document.getElementById("jobForm").style.display = "none";
-        document.getElementById("industryForm").style.display = "block";
+        document.getElementById("industryForm").style.display = "flex";
     }
 }
 
@@ -245,7 +245,7 @@ function saveBusinessName() {
     console.log(`Your business name is: ${businessName}`);
 
     document.getElementById("businessForm").style.display = "none";
-    document.getElementById("businessListingForm").style.display = "block";
+    document.getElementById("businessListingForm").style.display = "flex";
 }
 
 function saveBusinessListing() {
@@ -255,10 +255,10 @@ function saveBusinessListing() {
 
     if (businessListing === "yes") {
         document.getElementById("businessListingForm").style.display = "none";
-        document.getElementById("businessAddressForm").style.display = "block";
+        document.getElementById("businessAddressForm").style.display = "flex";
     } else {
         document.getElementById("businessListingForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "block";
+        document.getElementById("thankYouMessage").style.display = "flex";
     }
 }
 
@@ -269,7 +269,7 @@ function saveBusinessAddress() {
     // Additional logic for saving business address (not shown here)
     // For now, let's show the thank-you message:
     document.getElementById("businessAddressForm").style.display = "none";
-    document.getElementById("thankYouMessage").style.display = "block";
+    document.getElementById("thankYouMessage").style.display = "flex";
 }
 
 function saveIndustry() {
@@ -278,7 +278,7 @@ function saveIndustry() {
 
     // Hide the job title form and show the thank you message
     document.getElementById("industryForm").style.display = "none";
-    document.getElementById("volunteerForm").style.display = "block";
+    document.getElementById("volunteerForm").style.display = "flex";
 }
 
 function saveVolunteer() {
@@ -288,10 +288,10 @@ function saveVolunteer() {
 
     if (volunteer === "yes") {
         document.getElementById("volunteerForm").style.display = "none";
-        document.getElementById("contactForm").style.display = "block";
+        document.getElementById("contactForm").style.display = "flex";
     } else {
         document.getElementById("volunteerForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "block";
+        document.getElementById("thankYouMessage").style.display = "flex";
     }
 }
 
@@ -302,9 +302,11 @@ function saveContact() {
 
     if (contact === "Text") {
         document.getElementById("contactForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "block";
+        document.getElementById("thankYouMessage").style.display = "flex";
     } else {
         document.getElementById("contactForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "block";
+        document.getElementById("thankYouMessage").style.display = "flex";
     }
 }
+
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();

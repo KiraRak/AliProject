@@ -1,5 +1,7 @@
 /* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Reset default margin and padding */
 * {
@@ -16,19 +18,10 @@ body {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     min-height: 100vh; /* Ensure full viewport height */
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-/* Form label styles */
-label {
-    display: block; /* Ensures the label takes up the full width */
-    text-align: center; /* Horizontally centers the label text */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2vh;
-    margin-bottom: 1%; /* Adjust as needed */
-}
-
+ 
 /* Button styles */
 button {   
     align-items: center;
@@ -36,7 +29,7 @@ button {
     background-color: #33B5FF;
     color: #ffffff;
     border: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
     border-radius: 7px;
     padding: 10px 20px;
@@ -45,32 +38,33 @@ button {
 }
 
 button:hover {
-    background-color: #cc6805;
+    background-color: #1e8fd0;
 }
 
 /* Thank You Message styles */
 .thank-you {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 2rem;
     color: #316296;
     margin-top: 20px;
 }
 
-ul{
-    list-style: none;
-}
+#cornerImage {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 
-.list{
-    width: 100%;
-    background-color: #33B5FF;
-    border-radius: 0 0 7px 7px;
-}
+    /* Responsive image styles */
+    max-width: 300px; /* Set a maximum width for the image */
+    height: auto; /* Allow the height to adjust proportionally */
+  }
 
-.list-items{
-    padding: 10px, 5px;
-}
-
-.list-items:hover{
-    background-color: #a1cfea;
+footer {
+      text-align: center; /* Center the content horizontally */
+      font-size: 0.8em; /* Set a smaller font size */
+      color: gray; /* Set the color to gray */
+      position: absolute; /* Position the footer absolutely */
+      bottom: 0; /* Place it at the bottom of the page */
+      width: 100%; /* Span the entire width */
 }
