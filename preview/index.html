@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Information</title>
-  <link rel="stylesheet" href="/AliProject/preview/styles/style.css">
-  <link rel="stylesheet" href="/AliProject/preview/styles/forms.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/forms.css">
 </head>
 
 <body >
@@ -14,15 +14,16 @@
  
   <form id="userForm">
     <div>
-      <input type="text" id="firstName" placeholder="First Name" autocomplete="off" required><br>
+      <input type="text" id="firstName" placeholder="First Name" autocomplete="off"><br>
   
-      <input type="text" id="lastName" placeholder="Last Name" autocomplete="off" required><br>
+      <input type="text" id="lastName" placeholder="Last Name" autocomplete="off"><br>
   
-      <input type="email" id="email" placeholder="Email" autocomplete="off" required><br>
+      <input type="email" id="email" placeholder="Email" autocomplete="off"><br>
   
-      <input type="text" id="phone" placeholder="Phone" autocomplete="off" required><br>
+      <input type="text" id="phone" placeholder="Phone" autocomplete="off"><br>
   
       <button type="button" onclick="saveUserInfo()">Next</button>
+      
     </div>
   </form>
 
@@ -65,7 +66,7 @@
   <form id="businessAddressForm" style="display: none;"> 
     <div>
       <label for="businessAddress">What is your Business address?</label>
-      <input type="text" id="businessAddress" autocomplete="off" required><br>
+      <input type="text" id="businessAddress" autocomplete="off"><br>
     </div> 
     
 
@@ -77,7 +78,7 @@
       <label for="industry">What industry do you work in?</label>
 
       <span id="suggestion"></span>
-      <input type="text" id="industry" placeholder="ex. Food Industry" autocomplete="off" required><br>
+      <input type="text" id="industry" placeholder="ex. Food Industry" autocomplete="off"><br>
       
       <button type="button" onclick="saveIndustry()">Next</button>
     <!--</div>-->
@@ -115,7 +116,7 @@
     <p>&copy; <span id="currentYear"></span> The Muslim Network. All Rights Reserved</p>  
   </footer>
 
-  <script src="/AliProject/preview/src/main.js"></script>
+  <script src="src/main.js"></script>
 
 </body>
 
