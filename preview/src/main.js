@@ -230,20 +230,17 @@ function removeElements(){
 }
 
 function saveUserInfo() {
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
-    const email = document.getElementById("email").value.trim();
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const form = document.getElementById("userForm");
 
-    let isValid = true;
-    let errorMessage = "";
-
-    if (firstName === "") {
-        isValid = false;
-        errorMessage += "Please enter your first name.";
-    }
-
-    const phone = document.getElementById("phone").value.trim();
-
+    form.addEventListener('userBtn', (e)=> {
+        if (firstName.value === '' || firstName == null){
+            e.preventDefault()
+        }
+    })
     // Save user info (you can store it in local storage or send it to a server)
     // For demonstration purposes, we'll just display a welcome message:
     const fullName = firstName + " " + lastName;
@@ -253,6 +250,8 @@ function saveUserInfo() {
     document.getElementById("userForm").style.display = "none";
     document.getElementById("jobForm").style.display = "flex";
 }
+
+
 
 function saveJobStatus() {
     userJobStatus = document.getElementById("jobStatus").value;
