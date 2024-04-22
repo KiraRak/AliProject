@@ -245,6 +245,7 @@ function saveUserInfo() {
     document.getElementById("jobForm").style.display = "flex";
 }
 
+
 function saveJobStatus() {
     userJobStatus = document.getElementById("jobStatus").value;
     const jobMessage = userJobStatus === "company" ? "You work for a company." : "You own a business.";
@@ -296,7 +297,7 @@ function saveIndustry() {
     industry = document.getElementById("industry").value;
     console.log(`Your work for: ${industry}`);
 
-    // Hide the job title form and show the thank you message
+    // Hide the job title form 
     document.getElementById("industryForm").style.display = "none";
     document.getElementById("volunteerForm").style.display = "flex";
 }

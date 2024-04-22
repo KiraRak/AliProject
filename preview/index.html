@@ -4,32 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Information</title>
-  <link rel="stylesheet" href="/AliProject/preview/styles/style.css">
-  <link rel="stylesheet" href="/AliProject/preview/styles/forms.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/radioBtn.css">
 </head>
 
 <body >
  <img id="cornerImage" src="images/mascot.png" alt="Muslim Network Mascot">
 
- 
   <form id="userForm">
     <div>
-      <input type="text" id="firstName" placeholder="First Name" autocomplete="off" required><br>
+      <input type="text" id="firstName" name="first" placeholder="First Name" autocomplete="off"><br>
   
-      <input type="text" id="lastName" placeholder="Last Name" autocomplete="off" required><br>
+      <input type="text" id="lastName" name="last" placeholder="Last Name" autocomplete="off"><br>
   
-      <input type="email" id="email" placeholder="Email" autocomplete="off" required><br>
+      <input type="email" id="email" name="email" placeholder="Email" autocomplete="off"><br>
   
-      <input type="text" id="phone" placeholder="Phone" autocomplete="off" required><br>
+      <input type="text" id="phone" name="phone" placeholder="Phone" autocomplete="off"><br>
   
-      <button type="button" onclick="saveUserInfo()">Next</button>
+      <button type="button" id="usertBtn" onclick="saveUserInfo()">Next</button>
+      
     </div>
   </form>
 
 
   <form id="jobForm" style="display: none;" >
     <div>
-      <label for="jobStatus">What is your current employment status?</label>
+      <label class="mainLabels">What is your current employment status?</label>
     
       <select id="jobStatus">
         <option value="company">I currently work for a company</option>
@@ -42,8 +43,8 @@
 
   <form id="businessForm" style="display: none;">
     <div>
-      <label for="businessName">What is the name of your business?</label>
-      <input type="text" id="businessName" required placeholder="Enter Business Name"><br>
+      <label class="mainLabels">What is the name of your business?</label>
+      <input type="text" id="businessName" class="genericInputs" placeholder="Enter Business Name"><br>
 
       <button type="button" onclick="saveBusinessName()">Next</button>
     </div>
@@ -51,12 +52,19 @@
 
   <form id="businessListingForm" style="display: none;">
     <div>
-      <label for="businessListing">Would you like to list your Business on our directory?</label>
-      <select id="businessListing">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
-  
+      <label class="mainLabels">Would you like to list your Business on our directory?</label>
+
+      <div class="radioBttns">
+        <label class="radio">
+          <input type="radio" value="yes" id="businessListing" name="businessList">
+          Yes
+        </label>
+        
+        <label class="radio">
+          <input type="radio" value="no" id="businessListing" name="businessList">
+          No
+        </label>
+      </div>
       <button type="button" onclick="saveBusinessListing()">Next</button>  
     </div>
     
@@ -64,32 +72,40 @@
 
   <form id="businessAddressForm" style="display: none;"> 
     <div>
-      <label for="businessAddress">What is your Business address?</label>
-      <input type="text" id="businessAddress" autocomplete="off" required><br>
+      <label class="mainLabels">What is your Business address?</label>
+      <input type="text" id="businessAddress" class="genericInputs" autocomplete="off"/>
     </div> 
     
-
     <button type="button" onclick="saveBusinessAddress()">Next</button>
   </form>
 
   <form class="autocomplete-industry" id="industryForm" style="display: none;">
     <!--<div>-->
-      <label for="industry">What industry do you work in?</label>
+      <label class="mainLabels">What industry do you work in?</label>
 
       <span id="suggestion"></span>
-      <input type="text" id="industry" placeholder="ex. Food Industry" autocomplete="off" required><br>
+      <input type="text" id="industry" placeholder="ex. Food Industry" autocomplete="off"><br>
       
       <button type="button" onclick="saveIndustry()">Next</button>
     <!--</div>-->
   </form>
 
-  <form id="volunteerForm" style="display: none;">
+  <form style="display: none;" id="volunteerForm">
     <div>
-      <label for="volunteer">Are you interested in staying connected and potentially volunteering for future initiatives?</label>
-      <select id="volunteer">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
+      <label class="mainLabels">Are you interested in staying connected and potentially volunteering for future initiatives?</label>
+
+      <div class="radioBttns">
+        <label class="radio">
+          <input type="radio" value="yes" id="volunteer" name="isVolunteer">
+          Yes
+        </label>
+        
+        <label class="radio">
+          <input type="radio" value="no" id="volunteer" name="isVolunteer">
+          No
+        </label>
+      </div>
+
 
       <button type="button" onclick="saveVolunteer()">Next</button>
     </div>
@@ -97,7 +113,7 @@
 
   <form id="contactForm" style="display: none;">
     <div>
-      <label for="contact">How would you like us to contact you?</label>
+      <label class="mainLabels">How would you like us to contact you?</label>
       <select id="contact">
         <option value="Text">Text</option>
         <option value="Email">Email</option>
@@ -115,7 +131,7 @@
     <p>&copy; <span id="currentYear"></span> The Muslim Network. All Rights Reserved</p>  
   </footer>
 
-  <script src="/AliProject/preview/src/main.js"></script>
+  <script src="src/main.js"></script>
 
 </body>
 
