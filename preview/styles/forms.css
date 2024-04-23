@@ -4,7 +4,7 @@ select{
 cursor: pointer;
 }
 .mainLabels{
-    display: block;
+    display: inline-block;
     font-family: 'Poppins', sans-serif;
     margin-top: 1vw;
     font-size: 1.4rem;
