@@ -24,7 +24,7 @@ cursor: pointer;
     margin-top: 1.5rem
 }
 
-#userForm{
+.form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,8 +33,7 @@ cursor: pointer;
     height: 200%;
     max-width: 400px;
     padding: 20px;
-    border-radius: 7px;
-
+    border-radius: 7px; 
 }
 
 #userForm input{
@@ -47,18 +46,6 @@ cursor: pointer;
     margin-bottom: 1.5rem;
 }
 
-#jobForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
-}
-
 #jobForm select{
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -69,23 +56,6 @@ cursor: pointer;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem
 }
-
-
-#businessListingForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
-}
-
-
-
-
 
 #industryForm{
     flex-direction: column;
@@ -128,36 +98,11 @@ cursor: pointer;
     /*margin-bottom: 1.5rem;*/
 }
 
-
 @media screen and (max-width: 600px) {
     .input-container{
         width: 80vw;
     }
 
-}
-
-#volunteerForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
-}
-
-#contactForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
 }
 
 #contactForm select{
@@ -169,28 +114,4 @@ cursor: pointer;
     padding: 7px;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem
-}
-
-#businessForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
-}
-
-#businessAddressForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
 }
