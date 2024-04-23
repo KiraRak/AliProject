@@ -4,7 +4,7 @@ select{
 cursor: pointer;
 }
 .mainLabels{
-    display: block;
+    display: inline-block;
     font-family: 'Poppins', sans-serif;
     margin-top: 1vw;
     font-size: 1.4rem;
@@ -15,103 +15,60 @@ cursor: pointer;
 
 .genericInputs{
     width: 100%;
-    height: 38px;
+    height: 40px;
     border-radius: 6px;
     border: 1px solid #dddfd6;
     padding: 7px;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem
+    margin-top: 1.5rem;
+    z-index: 5;
 }
+
 
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
+    width: 30vw;
     padding: 20px;
     border-radius: 7px; 
 }
 
-#userForm input{
-    width: 100%;
-    height: 38px;
-    border-radius: 6px;
-    border: 1px solid #dddfd6;
-    padding: 7px;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 1.5rem;
-}
-
-#jobForm select{
+.dropdown{
     font-family: 'Poppins', sans-serif;
     width: 100%;
     height: 38px;
     border-radius: 6px;
     border: 1px solid #dddfd6;
     padding: 7px;
-    margin-bottom: 1.5rem;
     margin-top: 1.5rem
 }
 
-#industryForm{
-    flex-direction: column;
-    background-color: #ffffff;
-    width: 200%;
-    height: 200%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 7px; 
+#industryForm {
     position: relative;
+}
+
+#industryform{
+    position: relative;
+    z-index: 1;
     
 }
 
 #suggestion{
-    width: 100%;
-    height: 38px;
-    padding: 7px;
-    font-family: 'Poppins', sans-serif;   
-    z-index: 2;
-    top: 42.01%;
-    left: 5.25%;
-    display: flex;
     align-items: center;
     color: #868686b9;
     position: absolute;
+    top: 102px;
+    padding-left: 8px ;
     font-size: 15px;
+    z-index: 2;
 }
 
 #industryForm input{
-    width: 100%;
-    height: 38px;
-    border-radius: 6px;
-    border: 1px solid #dddfd6;
     background-color: transparent;
-    padding: 7px;
-    font-family: 'Poppins', sans-serif;   
-    margin-top: 1.5rem;
-    z-index: 5;
+    z-index: 3;
     font-size: 15px;
-    /*margin-bottom: 1.5rem;*/
 }
 
-@media screen and (max-width: 600px) {
-    .input-container{
-        width: 80vw;
-    }
 
-}
-
-#contactForm select{
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    height: 38px;
-    border-radius: 6px;
-    border: 1px solid #dddfd6;
-    padding: 7px;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem
-}

@@ -245,7 +245,6 @@ function saveUserInfo() {
     document.getElementById("jobForm").style.display = "flex";
 }
 
-
 function saveJobStatus() {
     userJobStatus = document.getElementById("jobStatus").value;
     const jobMessage = userJobStatus === "company" ? "You work for a company." : "You own a business.";
