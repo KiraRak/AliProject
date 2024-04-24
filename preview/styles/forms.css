@@ -15,8 +15,8 @@ cursor: pointer;
 
 .genericInputs{
     width: 100%;
-    height: 40px;
-    border-radius: 6px;
+    height: 3.2rem;
+    border-radius: 7px;
     border: 1px solid #dddfd6;
     padding: 7px;
     font-family: 'Poppins', sans-serif;
@@ -31,18 +31,18 @@ cursor: pointer;
     justify-content: center;
     background-color: #ffffff;
     width: 30vw;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 7px; 
 }
 
 .dropdown{
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    height: 38px;
+    height: 3rem;
     border-radius: 6px;
     border: 1px solid #dddfd6;
     padding: 7px;
-    margin-top: 1.5rem
+    margin-top: 1rem
 }
 
 #industryForm {
@@ -59,8 +59,8 @@ cursor: pointer;
     align-items: center;
     color: #868686b9;
     position: absolute;
-    top: 102px;
-    padding-left: 8px ;
+    top: 7.45rem;
+    padding-left: 0.5rem ;
     font-size: 15px;
     z-index: 2;
 }
