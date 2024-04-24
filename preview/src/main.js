@@ -150,7 +150,7 @@ let data = [
     "Wine/Spirits",
     "Wireless",
     "Writing/Editing"
-   ]
+]
 
 data.sort();
 let industry = document.getElementById("industry");
@@ -166,7 +166,6 @@ window.onload = () => {
 const clearSuggestion = () => {
     suggestion.innerHTML = "";
 };
-
 
 const caseCheck = (word) => {
     //Array of characters
@@ -187,7 +186,7 @@ const caseCheck = (word) => {
     }
     //array to string
     return word.join("");
-  };
+};
 
 //complete predictive text with enter key
 industry.addEventListener("keydown", (e) => {
@@ -230,22 +229,29 @@ function removeElements(){
 }
 
 function saveUserInfo() {
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-
-    // Save user info (you can store it in local storage or send it to a server)
-    // For demonstration purposes, we'll just display a welcome message:
+    const firstName = document.getElementById("firstName").value.trim(); // Trim whitespace
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+  
+    // Check for empty fields using a loop and early return
+    const emptyFields = [];
+    for (const input of document.getElementById("userForm").querySelectorAll("input")) {
+      if (!input.value.trim()) {
+        emptyFields.push(input.placeholder); // Store placeholders for clear messages
+        return alert("Please fill in the following fields:\n" + emptyFields.join(", "));
+      }
+    }
+  
+    // Save user info or display welcome message (logic from your original code)
     const fullName = firstName + " " + lastName;
     console.log(`Welcome, ${fullName}! Your email is ${email} and your phone is ${phone}.`);
-
-    // Show the job status form
+  
+    // Show the job status form (logic from your original code)
     document.getElementById("userForm").style.display = "none";
     document.getElementById("jobForm").style.display = "flex";
 }
-
-
+  
 function saveJobStatus() {
     userJobStatus = document.getElementById("jobStatus").value;
     const jobMessage = userJobStatus === "company" ? "You work for a company." : "You own a business.";
@@ -262,60 +268,102 @@ function saveJobStatus() {
 }
 
 function saveBusinessName() {
-    businessName = document.getElementById("businessName").value;
+    const businessNameInput = document.getElementById("businessName");
+    const businessName = businessNameInput.value.trim(); // Trim whitespace
+  
+    // Check if business name is empty
+    if (!businessName) {
+      alert("Please enter your business name.");
+      return; // Exit function if empty
+    }
+  
+    // Process business name (logic for saving or displaying)
     console.log(`Your business name is: ${businessName}`);
-
+  
+    // Assuming you have logic to show the business listing form
     document.getElementById("businessForm").style.display = "none";
     document.getElementById("businessListingForm").style.display = "flex";
 }
-
+  
 function saveBusinessListing() {
-    businessListing = document.getElementById("businessListing").value;
-    const listingMessage = businessListing === "yes" ? "You want to list your business." : "You do not want to list your business.";
+    const isBusinessListedRadio = document.querySelector('input[name="businessList"]:checked'); // Get checked radio button
+  
+    if (!isBusinessListedRadio) {
+      alert("Please select whether you'd like to list your business.");
+      return; // Exit function if no selection
+    }
+  
+    const businessListingValue = isBusinessListedRadio.value; 
+    const listingMessage = businessListingValue === "yes" ? "Your business will be listed." : "Thanks for letting us know."; // Clearer message
     console.log(listingMessage);
-
-    if (businessListing === "yes") {
-        document.getElementById("businessListingForm").style.display = "none";
-        document.getElementById("businessAddressForm").style.display = "flex";
+  
+    if (businessListingValue === "yes") {
+      document.getElementById("businessListingForm").style.display = "none";
+      document.getElementById("businessAddressForm").style.display = "flex";
     } else {
-        document.getElementById("businessListingForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "flex";
+      document.getElementById("businessListingForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "flex";
     }
 }
-
+  
 function saveBusinessAddress() {
-    businessAddress = document.getElementById("businessAddress").value;
+    const businessAddressInput = document.getElementById("businessAddress");
+    const businessAddress = businessAddressInput.value.trim(); // Trim whitespace
+  
+    // Check if business address is empty
+    if (!businessAddress) {
+      alert("Please enter your business address.");
+      return; // Exit function if empty
+    }
+  
+    // Process business address (logic for saving or displaying)
     console.log(`Your business address is: ${businessAddress}`);
-
-    // Additional logic for saving business address (not shown here)
-    // For now, let's show the thank-you message:
+  
+    // Assuming you have logic to show the thank you message
     document.getElementById("businessAddressForm").style.display = "none";
     document.getElementById("thankYouMessage").style.display = "flex";
 }
-
+  
 function saveIndustry() {
-    industry = document.getElementById("industry").value;
-    console.log(`Your work for: ${industry}`);
-
-    // Hide the job title form 
+    const industryInput = document.getElementById("industry");
+    const industryValue = industryInput.value.trim(); // Trim whitespace
+  
+    // Check if industry field is empty
+    if (!industryValue) {
+      alert("Please enter your industry.");
+      return; // Exit function if empty
+    }
+  
+    // Process industry information (logic for saving or displaying)
+    console.log("Industry:", industryValue);
+  
     document.getElementById("industryForm").style.display = "none";
     document.getElementById("volunteerForm").style.display = "flex";
 }
-
+  
 function saveVolunteer() {
-    volunteer = document.getElementById("volunteer").value;
-    const volunteerMessage = volunteer === "yes" ? "You want to be a volunteer." : "You do not want to be a volunteer.";
+    const isVolunteerRadio = document.querySelector('input[name="isVolunteer"]:checked'); // Get checked radio button
+  
+    // Check if a radio button is selected
+    if (!isVolunteerRadio) {
+      alert("Please select whether you'd like to volunteer.");
+      return; // Exit function if no selection
+    }
+  
+    const volunteerValue = isVolunteerRadio.value; // Get the selected radio button value
+    const volunteerMessage = volunteerValue === "yes" ? "You're interested in volunteering!" : "Thanks for letting us know."; // Clearer message
     console.log(volunteerMessage);
-
-    if (volunteer === "yes") {
-        document.getElementById("volunteerForm").style.display = "none";
-        document.getElementById("contactForm").style.display = "flex";
+  
+    // Show appropriate form based on selection
+    if (volunteerValue === "yes") {
+      document.getElementById("volunteerForm").style.display = "none";
+      document.getElementById("contactForm").style.display = "flex";
     } else {
-        document.getElementById("volunteerForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "flex";
+      document.getElementById("volunteerForm").style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "flex";
     }
 }
-
+  
 function saveContact() {
     contact = document.getElementById("contact").value;
     const contactMessage = contact === "Text" ? "We will send you a text message soon." : "Wait for our email.";

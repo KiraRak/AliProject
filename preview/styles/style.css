@@ -1,9 +1,7 @@
-/* style.css */
 /*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Reset default margin and padding */
+ 
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +21,7 @@ body {
 
  
 /* Button styles */
-button {   
+.nextBttn {   
     align-items: center;
     width: 100%;
     background-color: #33B5FF;
@@ -35,6 +33,7 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 1.5rem
 }
 
 button:hover {
@@ -54,17 +53,17 @@ button:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
-
-    /* Responsive image styles */
-    max-width: 300px; /* Set a maximum width for the image */
-    height: auto; /* Allow the height to adjust proportionally */
+    width: 30vw; 
+    height: auto; 
   }
 
 footer {
-      text-align: center; /* Center the content horizontally */
-      font-size: 0.8em; /* Set a smaller font size */
-      color: gray; /* Set the color to gray */
-      position: absolute; /* Position the footer absolutely */
-      bottom: 0; /* Place it at the bottom of the page */
-      width: 100%; /* Span the entire width */
+    text-align: center;
+    font-size: 0.8rem; 
+    color: gray;
+    position: absolute;  
+    bottom: 0;
+    width: 100%; 
+    margin-bottom: 0.3vw;
 }
+
