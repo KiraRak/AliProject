@@ -150,7 +150,7 @@ let data = [
     "Wine/Spirits",
     "Wireless",
     "Writing/Editing"
-   ]
+]
 
 data.sort();
 let industry = document.getElementById("industry");
@@ -166,7 +166,6 @@ window.onload = () => {
 const clearSuggestion = () => {
     suggestion.innerHTML = "";
 };
-
 
 const caseCheck = (word) => {
     //Array of characters
@@ -187,7 +186,7 @@ const caseCheck = (word) => {
     }
     //array to string
     return word.join("");
-  };
+};
 
 //complete predictive text with enter key
 industry.addEventListener("keydown", (e) => {
@@ -251,7 +250,7 @@ function saveUserInfo() {
     // Show the job status form (logic from your original code)
     document.getElementById("userForm").style.display = "none";
     document.getElementById("jobForm").style.display = "flex";
-  }
+}
   
 function saveJobStatus() {
     userJobStatus = document.getElementById("jobStatus").value;
@@ -284,7 +283,7 @@ function saveBusinessName() {
     // Assuming you have logic to show the business listing form
     document.getElementById("businessForm").style.display = "none";
     document.getElementById("businessListingForm").style.display = "flex";
-  }
+}
   
 function saveBusinessListing() {
     const isBusinessListedRadio = document.querySelector('input[name="businessList"]:checked'); // Get checked radio button
@@ -305,18 +304,8 @@ function saveBusinessListing() {
       document.getElementById("businessListingForm").style.display = "none";
       document.getElementById("thankYouMessage").style.display = "flex";
     }
-  }
+}
   
-/*function saveBusinessAddress() {
-    businessAddress = document.getElementById("businessAddress").value;
-    console.log(`Your business address is: ${businessAddress}`);
-
-    // Additional logic for saving business address (not shown here)
-    // For now, let's show the thank-you message:
-    document.getElementById("businessAddressForm").style.display = "none";
-    document.getElementById("thankYouMessage").style.display = "flex";
-}*/
-
 function saveBusinessAddress() {
     const businessAddressInput = document.getElementById("businessAddress");
     const businessAddress = businessAddressInput.value.trim(); // Trim whitespace
@@ -333,9 +322,8 @@ function saveBusinessAddress() {
     // Assuming you have logic to show the thank you message
     document.getElementById("businessAddressForm").style.display = "none";
     document.getElementById("thankYouMessage").style.display = "flex";
-  }
+}
   
-
 function saveIndustry() {
     const industryInput = document.getElementById("industry");
     const industryValue = industryInput.value.trim(); // Trim whitespace
@@ -351,7 +339,7 @@ function saveIndustry() {
   
     document.getElementById("industryForm").style.display = "none";
     document.getElementById("volunteerForm").style.display = "flex";
-  }
+}
   
 function saveVolunteer() {
     const isVolunteerRadio = document.querySelector('input[name="isVolunteer"]:checked'); // Get checked radio button
@@ -374,7 +362,7 @@ function saveVolunteer() {
       document.getElementById("volunteerForm").style.display = "none";
       document.getElementById("thankYouMessage").style.display = "flex";
     }
-  }
+}
   
 function saveContact() {
     contact = document.getElementById("contact").value;
