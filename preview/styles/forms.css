@@ -21,7 +21,7 @@ cursor: pointer;
     padding: 7px;
     font-family: 'Poppins', sans-serif;
     margin-top: 1.5rem;
-    z-index: 5;
+    font-size: 1em;
 }
 
 
@@ -33,8 +33,21 @@ cursor: pointer;
     width: 30vw;
     padding: 2rem;
     border-radius: 7px; 
+    /*opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Add transition for smooth change */
 }
 
+#userForm.active ~ #jobForm {
+    /* Sibling selector: target jobForm only when userForm is active */
+    opacity: 0;
+  }
+  
+  #userForm:not(.active) ~ #jobForm {
+    /* Sibling selector again: target jobForm only when userForm is not active */
+    opacity: 1;
+  }
+  
+  
 .dropdown{
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -47,28 +60,22 @@ cursor: pointer;
 
 #industryForm {
     position: relative;
-}
-
-#industryform{
-    position: relative;
     z-index: 1;
-    
 }
 
 #suggestion{
-    align-items: center;
     color: #868686b9;
     position: absolute;
     top: 7.45rem;
     padding-left: 0.5rem ;
-    font-size: 15px;
+    font-size: 1em;
     z-index: 2;
 }
 
 #industryForm input{
     background-color: transparent;
     z-index: 3;
-    font-size: 15px;
+    font-size: 1em;
 }
 
 

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Information</title>
+  <title>The Muslim Network</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/forms.css">
   <link rel="stylesheet" href="styles/radioBtn.css">
+  <link rel="stylesheet" href="styles/animations.css">
   <!--<link rel="stylesheet" href="styles/responsive.css">-->
 </head>
 
@@ -16,19 +17,15 @@
   <form id="userForm" class="form">
     <div class="container">
       <input type="text" id="firstName" class="genericInputs" name="first" placeholder="First Name" autocomplete="off"/>
-  
       <input type="text" id="lastName" class="genericInputs" name="last" placeholder="Last Name" autocomplete="off"/>
-  
       <input type="email" id="email" class="genericInputs" name="email" placeholder="Email" autocomplete="off"/>
-  
       <input type="text" id="phone" class="genericInputs" name="phone" placeholder="Phone" autocomplete="off"/>
-  
       <button type="button" id="usertBtn" class="nextBttn" onclick="saveUserInfo()">Next</button>
       
     </div>
   </form>
 
-  <form id="jobForm" class="form" style="display: none;" >
+  <form id="jobForm" class="form" style="display: none;">
     <div>
       <label class="mainLabels">What is your current employment status?</label>
     
@@ -125,12 +122,11 @@
   
   <div class="thank-you" id="thankYouMessage" style="display: none;">
     <p>Thank you! We appreciate it.</p>
+    <div id="countdown-container"></div>
   </div>
 
   <footer>
     <p>&copy; <span id="currentYear"></span> The Muslim Network. All Rights Reserved</p>  
   </footer>
-
   <script src="src/main.js"></script>
-
 </body>

@@ -13,9 +13,9 @@ body {
     background: linear-gradient(135deg, #e6e6fa, #b0c4de);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure full viewport height */
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; 
     font-family: 'Poppins', sans-serif;
 }
 
@@ -27,7 +27,6 @@ body {
     background-color: #33B5FF;
     color: #ffffff;
     border: none;
-    font-family: 'Poppins', sans-serif;
     font-size: large;
     border-radius: 7px;
     padding: 10px 20px;
@@ -55,7 +54,16 @@ button:hover {
     right: 10px;
     width: 30vw; 
     height: auto; 
+}
+
+#countdown-container {
+    display: block;
+    position: absolute;
+    top: 30rem;
+    left: 30rem;
+    font-weight: bold;
   }
+  
 
 footer {
     text-align: center;
@@ -66,4 +74,5 @@ footer {
     width: 100%; 
     margin-bottom: 0.3vw;
 }
+
 
