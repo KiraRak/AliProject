@@ -155,7 +155,6 @@ let data = [
 data.sort();
 let industry = document.getElementById("industry");
 let suggestion = document.getElementById("suggestion");
-
 const enterKey = 13;
 
 window.onload = () => {
@@ -229,10 +228,23 @@ function removeElements(){
 }
 
 function saveUserInfo() {
-    const firstName = document.getElementById("firstName").value.trim(); // Trim whitespace
+    const firstName = document.getElementById("firstName").value.trim(); 
     const lastName = document.getElementById("lastName").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
+
+     // Email validation using regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return; 
+    }
+    /*
+    // Validate phone number format
+    if (!validatePhoneNumber(phone)) {
+      alert("Please enter a valid phone number format (XXX-XXX-XXXX)");
+      return; // Exit function if phone number is invalid
+    }*/
   
     // Check for empty fields using a loop and early return
     const emptyFields = [];
@@ -242,14 +254,23 @@ function saveUserInfo() {
         return alert("Please fill in the following fields:\n" + emptyFields.join(", "));
       }
     }
-  
-    // Save user info or display welcome message (logic from your original code)
+
+    // Save user info or display welcome message 
     const fullName = firstName + " " + lastName;
     console.log(`Welcome, ${fullName}! Your email is ${email} and your phone is ${phone}.`);
   
-    // Show the job status form (logic from your original code)
+    // Show the job status form
     document.getElementById("userForm").style.display = "none";
     document.getElementById("jobForm").style.display = "flex";
+}
+
+function validatePhoneNumber(phone) {
+    // Regular expression for a basic USA phone number format (XXX-XXX-XXXX)
+    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+    // Remove non-numeric characters (optional for user experience)
+    const cleanedPhone = phone.replace(/\D/g, "");
+    // Check if the cleaned phone number matches the format
+    return phoneRegex.test(cleanedPhone);
 }
   
 function saveJobStatus() {
