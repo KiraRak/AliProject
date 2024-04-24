@@ -402,4 +402,5 @@ function startCountdown() {
   },1000);
 }
 
+
 document.getElementById("currentYear").innerHTML = new Date().getFullYear();
