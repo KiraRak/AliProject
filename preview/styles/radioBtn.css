@@ -1,16 +1,16 @@
-.radioBttns{
-    width: 80%;
+.radioBttn{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: 0.3rem;
-    margin-top: 1.5rem;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
 
 .radio{
+    display: inline-block;
+    
     font-family: 'Poppins', sans-serif;
-    font-size: 19px;
+    font-size: 1rem;
     color: #000000;
-    margin: auto;
 }
 

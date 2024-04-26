@@ -8,11 +8,16 @@
   <link rel="stylesheet" href="styles/forms.css">
   <link rel="stylesheet" href="styles/radioBtn.css">
   <link rel="stylesheet" href="styles/animations.css">
-  <!--<link rel="stylesheet" href="styles/responsive.css">-->
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/animations.css">
 </head>
 
 <body >
  <img id="cornerImage" src="images/mascot.png" alt="Muslim Network Mascot">
+
+ <div class="h1">
+  <p class="text">The Muslim Network</p>
+ </div>
 
   <form id="userForm" class="form">
     <div class="container">
@@ -20,17 +25,16 @@
       <input type="text" id="lastName" class="genericInputs" name="last" placeholder="Last Name" autocomplete="off"/>
       <input type="email" id="email" class="genericInputs" name="email" placeholder="Email" autocomplete="off"/>
       <input type="text" id="phone" class="genericInputs" name="phone" placeholder="Phone" autocomplete="off"/>
-      <button type="button" id="usertBtn" class="nextBttn" onclick="saveUserInfo()">Next</button>
-      
+      <button type="button" id="usertBtn" class="nextBttn" onclick="saveUserInfo()">Next</button> 
     </div>
   </form>
 
   <form id="jobForm" class="form" style="display: none;">
-    <div>
-      <label class="mainLabels">What is your current employment status?</label>
+    <div class="container">
+      <label class="mainLabels">Employment status</label>
     
       <select id="jobStatus" class="dropdown">
-        <option value="company">I currently work for a company</option>
+        <option value="company">I work for a company</option>
         <option value="business">I own a Business</option>
       </select>
 
@@ -39,19 +43,18 @@
   </form> 
 
   <form id="businessForm" class="form" style="display: none;">
-    <div>
-      <label class="mainLabels">What is the name of your business?</label>
-      <input type="text" id="businessName" class="genericInputs" placeholder="Enter Business Name"><br>
-
-      <button type="button" class="nextBttn" onclick="saveBusinessName()">Next</button>
+    <div class="container">
+      <label class="mainLabels">Your business name</label>
+      <input type="text" id="businessName" class="genericInputs" placeholder="Enter Business Name"/>
+      <button type="button"s class="nextBttn" onclick="saveBusinessName()">Next</button>
     </div>
   </form>
 
   <form id="businessListingForm" class="form" style="display: none;">
-    <div>
-      <label class="mainLabels">Would you like to list your Business on our directory?</label>
+    <div class="container">
+      <label class="mainLabels">Get listed in our directory</label>
 
-      <div class="radioBttns">
+      <div class="radioBttn">
         <label class="radio">
           <input type="radio" value="yes" id="businessListing" name="businessList">
           Yes
@@ -62,36 +65,39 @@
           No
         </label>
       </div>
+
       <button type="button" class="nextBttn" onclick="saveBusinessListing()">Next</button>  
     </div>
     
   </form>
 
   <form id="businessAddressForm" class="form" style="display: none;"> 
-    <div>
-      <label class="mainLabels">What is your Business address?</label>
+    <div class="container">
+      <label class="mainLabels">Your business address</label>
       <input type="text" id="businessAddress" class="genericInputs" autocomplete="off"/>
+  
+      <button type="button" class="nextBttn" onclick="saveBusinessAddress()">Next</button>
     </div> 
-    
-    <button type="button" class="nextBttn" onclick="saveBusinessAddress()">Next</button>
   </form>
 
   <form id="industryForm" class="form" style="display: none;">
-    <!--<div>-->
+    <div class="container">
       <label class="mainLabels">What industry do you work in?</label>
-          <input type="text" id="industry" class="genericInputs" placeholder="ex. Food Industry" autocomplete="off"><br>
-          <span id="suggestion" class="suggestion">
-          </span>
+
+        <div class="industry-container">
+          <input type="text" id="industry" class=" industry genericInputs" placeholder="ex. Food Industry" autocomplete="off"><br>
+          <span id="suggestion" class="suggestion"/> 
+        </div>
 
       <button type="button" class="nextBttn" onclick="saveIndustry()">Next</button>
-    <!--</div>-->
+    </div>
   </form>
 
   <form id="volunteerForm" class="form" style="display: none;">
-    <div>
-      <label class="mainLabels">Are you interested in staying connected and potentially volunteering for future initiatives?</label>
+    <div class="container">
+      <label class="mainLabels">Stay connected and volunteer in the future</label>
 
-      <div class="radioBttns">
+      <div class="radioBttn">
         <label class="radio">
           <input type="radio" value="yes" id="volunteer" name="isVolunteer">
           Yes
@@ -108,8 +114,8 @@
   </form>  
 
   <form id="contactForm" class="form" style="display: none;">
-    <div>
-      <label class="mainLabels">How would you like us to contact you?</label>
+    <div class="container">
+      <label class="mainLabels">How can we reach you</label>
 
       <select id="contact" class="dropdown">
         <option value="Text">Text</option>
