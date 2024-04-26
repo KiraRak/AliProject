@@ -155,9 +155,9 @@ let data = [
 data.sort();
 let industry = document.getElementById("industry");
 let suggestion = document.getElementById("suggestion");
-
 const enterKey = 13;
 
+  
 window.onload = () => {
     industry.value = "";
     clearSuggestion();
@@ -229,25 +229,27 @@ function removeElements(){
 }
 
 function saveUserInfo() {
-    const firstName = document.getElementById("firstName").value.trim(); // Trim whitespace
-    const lastName = document.getElementById("lastName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-  
-    // Check for empty fields using a loop and early return
-    const emptyFields = [];
-    for (const input of document.getElementById("userForm").querySelectorAll("input")) {
-      if (!input.value.trim()) {
-        emptyFields.push(input.placeholder); // Store placeholders for clear messages
-        return alert("Please fill in the following fields:\n" + emptyFields.join(", "));
-      }
+  const firstName = document.getElementById("firstName").value.trim(); 
+  const lastName = document.getElementById("lastName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+
+    // Email validation using regular expression
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return; 
+  }
+
+  // Check for empty fields using a loop and early return
+  const emptyFields = [];
+  for (const input of document.getElementById("userForm").querySelectorAll("input")) {
+    if (!input.value.trim()) {
+      emptyFields.push(input.placeholder); // Store placeholders for clear messages
+      return alert("Please fill in the following fields:\n" + emptyFields.join(", "));
     }
-  
-    // Save user info or display welcome message (logic from your original code)
-    const fullName = firstName + " " + lastName;
-    console.log(`Welcome, ${fullName}! Your email is ${email} and your phone is ${phone}.`);
-  
-    // Show the job status form (logic from your original code)
+  }
+    // Show the job status form
     document.getElementById("userForm").style.display = "none";
     document.getElementById("jobForm").style.display = "flex";
 }
@@ -303,6 +305,7 @@ function saveBusinessListing() {
     } else {
       document.getElementById("businessListingForm").style.display = "none";
       document.getElementById("thankYouMessage").style.display = "flex";
+      startCountdown();
     }
 }
   
@@ -322,6 +325,7 @@ function saveBusinessAddress() {
     // Assuming you have logic to show the thank you message
     document.getElementById("businessAddressForm").style.display = "none";
     document.getElementById("thankYouMessage").style.display = "flex";
+    startCountdown();
 }
   
 function saveIndustry() {
@@ -361,21 +365,43 @@ function saveVolunteer() {
     } else {
       document.getElementById("volunteerForm").style.display = "none";
       document.getElementById("thankYouMessage").style.display = "flex";
+      startCountdown();
     }
 }
   
 function saveContact() {
-    contact = document.getElementById("contact").value;
-    const contactMessage = contact === "Text" ? "We will send you a text message soon." : "Wait for our email.";
-    console.log(contactMessage);
+  contact = document.getElementById("contact").value;
+  const contactMessage = contact === "Text" ? "We will send you a text message soon." : "Wait for our email.";
+  console.log(contactMessage);
 
-    if (contact === "Text") {
-        document.getElementById("contactForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "flex";
-    } else {
-        document.getElementById("contactForm").style.display = "none";
-        document.getElementById("thankYouMessage").style.display = "flex";
-    }
+  if (contact === "Text") {
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "flex";
+    // Start the countdown on showing Thank You message
+    startCountdown();
+  } else {
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementsByClassName("h1").style.display="none";
+    document.getElementById("thankYouMessage").style.display = "flex";
+    // Start the countdown on showing Thank You message
+    startCountdown();
+  }
 }
+
+function startCountdown() {
+  const countdownContainer = document.getElementById("countdown-container");
+  let seconds = 100;
+
+  const countdownInterval = setInterval(() => {
+    countdownContainer.textContent = ` Redirecting to Google in ${seconds} seconds...`;
+    seconds--;
+
+    if (seconds < 0) {
+      clearInterval(countdownInterval);
+      window.location.href = "https://www.google.com"; 
+    }
+  },1000);
+}
+
 
 document.getElementById("currentYear").innerHTML = new Date().getFullYear();
