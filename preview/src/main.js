@@ -381,7 +381,7 @@ function saveContact() {
     startCountdown();
   } else {
     document.getElementById("contactForm").style.display = "none";
-    document.getElementsByClassName("h1").style.display="none";
+    //document.getElementsByClassName("h1").style.display="none";
     document.getElementById("thankYouMessage").style.display = "flex";
     // Start the countdown on showing Thank You message
     startCountdown();
@@ -390,7 +390,7 @@ function saveContact() {
 
 function startCountdown() {
   const countdownContainer = document.getElementById("countdown-container");
-  let seconds = 100;
+  let seconds = 5;
 
   const countdownInterval = setInterval(() => {
     countdownContainer.textContent = ` Redirecting to Google in ${seconds} seconds...`;

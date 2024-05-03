@@ -1,139 +1,272 @@
-@media (max-width: 1059px){
-    .form{
-        width: 40vw;
-
+/*
+1201px and more —  Extra large screens, TV*/
+@media (max-width: 1201px) {
+   
+    .container{
+        width: 420px;
     }
 
     .mainLabels{
-        font-size: 1.3rem; 
+        font-size: 17px; 
     }
 
     .genericInputs{
-        width: 100%;
-        height: 3em;
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .nextBttn{
-        width: 100%;
-        font-size: 1rem ;
+        font-size: 17px;
     }
 
     .dropdown{
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     footer{
-        font-size: small;
+        font-size: 12px;
     }
 
     .suggestion{
-        font-size: 1rem;
-
+        font-size: 16px;
     }
 
     .radio{
-        font-size: 1.1rem;
-    }
-
-    #countdown-container{
-        top:55vh;
-        left:30vw;
-        font-size: 1rem;
-    } 
-}
-
-@media (max-width: 1024px){
-    .form{
-        width: 45vw;
-
-    }
-
-    .mainLabels{
-        font-size: 1.2rem; 
-    }
-
-    .genericInputs{
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .nextBttn{
-        width: 100%;
-        font-size: 1rem ;
-    }
-
-    .dropdown{
-        font-size: 1rem;
-    }
-
-    footer{
-        font-size: medium;
-    }
-
-    .suggestion{
-        font-size: 1rem;
-
-    }
-
-    .radio{
-        font-size: 1rem;
-    }
-
-    #countdown-container{
-        top:54vh;
-        left:30vw;
-        font-size: 1.4rem;
-    } 
-}
-
-@media (max-width: 414px){
-    .form{
-        width: 65vw;
-
-    }
-
-    .mainLabels{
-        font-size: 0.9rem; 
-    }
-
-    .genericInputs{
-        width: 100%;
-        font-size: 0.7rem;
-    }
-
-    .nextBttn{
-        width: 100%;
-        height: 2em;
-        font-size: 0.8rem ;
-    }
-
-    .dropdown{
-        font-size: 0.7rem;
-    }
-
-    footer{
-        font-size: small;
-    }
-
-    .suggestion{
-        font-size: 0.7rem;
-
-    }
-
-    .radio{
-        font-size: 0.8rem;
+        font-size: 16px;
     }
 
     #cornerImage{
-        width: 55vw;
+        width: 290px;
+    }
+
+    .thank-you{
+        font-size: 25px;
     }
 
     #countdown-container{
-        top:60vh;
-        left:11vw;
-        font-size: 1rem;
+        top:400px;
+        text-align: center;
+        font-size: 25;
     }
 }
 
+@media (max-width: 1025px) {
+   
+    .form{
+        width: 550px;
+    }
 
+    .mainLabels{
+        font-size: 17px; 
+    }
+
+    .genericInputs{
+        font-size: 15px;
+    }
+
+    .nextBttn{
+        font-size: 16px;
+    }
+
+    .dropdown{
+        font-size: 15px;
+    }
+
+    footer{
+        font-size: 11px;
+    }
+
+    .suggestion{
+        font-size: 15px;
+    }
+
+    .radio{
+        font-size: 15px;
+    }
+
+    #cornerImage{
+        width: 290px;
+    }
+
+    .thank-you{
+        font-size: 25px;
+    }
+
+    #countdown-container{
+        top:400px;
+        text-align: center;
+        font-size: 25;
+    }
+}
+
+@media (max-width: 769px) {
+   
+    .container{
+        width: 370px;
+    }
+
+    .mainLabels{
+        font-size: 16px; 
+    }
+
+    .genericInputs{
+        font-size: 14px;
+    }
+
+    .nextBttn{
+        font-size: 15px;
+    }
+
+    .dropdown{
+        font-size: 14px;
+    }
+
+    footer{
+        font-size: 8px;
+    }
+
+    .suggestion{
+        font-size: 14px;
+    }
+
+    .radio{
+        font-size: 14px;
+    }
+
+    #cornerImage{
+        width: 220px;
+    }
+
+    .thank-you{
+        font-size: 24px;
+    }
+
+    #countdown-container{
+        top:400px;
+        text-align: center;
+        font-size: 24;
+    }
+}
+
+@media (max-width: 481px) {
+   
+    .container{
+        width: 300px;
+    }
+
+    .mainLabels{
+        font-size: 15px; 
+    }
+
+    .genericInputs{
+        font-size: 12px;
+    }
+
+    .nextBttn{
+        font-size: 14px;
+    }
+
+    .dropdown{
+        font-size: 12px;
+    }
+
+    footer{
+        font-size: 8px;
+    }
+
+    .suggestion{
+        font-size: 12px;
+    }
+
+    .radio{
+        font-size: 12px;
+    }
+
+    #cornerImage{
+        width: 180px;
+    }
+
+    .thank-you{
+        font-size: 24px;
+    }
+
+    #countdown-container{
+        top:400px;
+        text-align: center;
+        font-size: 24;
+    }
+}
+
+@media (max-width: 320px){
+    .supreme-container{
+        min-height: 100vh;
+        min-width: 100vw;
+        align-content: center;
+    }
+    
+    .main{
+        margin: 0 auto; 
+    }
+
+    .container{
+        width: 250px;
+    }
+
+    .mainLabels{
+        font-size: 13px; 
+    }
+
+    .genericInputs{
+        font-size: 10px;
+    }
+
+    .nextBttn{
+        font-size: 11px;
+    }
+
+    .dropdown{
+        font-size: 10px;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+
+    .suggestion{
+        font-size: 10px;
+
+    }
+
+    .radio{
+        font-size: 10px;
+    }
+
+    #cornerImage{
+        width: 150px;
+    }
+
+    .thank-you{
+        font-size: 18px;
+    }
+
+    #countdown-container{
+        top:400px;
+        text-align: center;
+        font-size: 18;
+    }
+}
+
+@media (max-width: 375px) {
+    #cornerImage{
+        width: 140px;
+    }
+
+    .thank-you{
+        font-size: 18px;
+    }
+
+    #countdown-container{
+        top:340px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
